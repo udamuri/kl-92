@@ -1,0 +1,170 @@
+@midi:  ~"(max-width: 767px)";
+body 
+{
+
+}
+
+@blue : #337ab7;
+@gray : #F8F8F8;
+
+.homeslide{
+    #slider.flexslider {
+        margin:0;
+        .slides{
+            >li{
+                position:relative;
+                overflow:hidden;
+                background: grey;
+                margin: auto;
+                .fleximg{
+                	width: 100%;
+                	height: 450px;
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                    @media @midi 
+                    {
+                    	height:200px;
+                    }
+                    img{
+                    	text-align: center;
+                    	margin: auto;
+                        width: auto;
+                        max-height: 100%;
+                        max-width: 100%;
+                        display:inline-block;
+                    }
+
+                    img.lazy 
+                    {
+                        background: url(img/loading.gif) center center no-repeat;
+                        min-height: 100px;
+                        min-width: 100px;
+                        text-indent: 100%;
+                    }
+                }
+                .flex-caption {
+                    width: 100%;
+                    z-index:99999;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #fff;
+                    left: 0;
+                    bottom: 0;
+                    position:absolute;                    
+                    text-align:center;
+                    margin:0;
+                    .fccntr{
+                        display:inline-block;
+                        padding:2px 10px;
+                        background: rgba(0,0,0,.5);
+
+                    }
+                }
+            }
+        }
+    }
+    #carousel {
+        margin:0 0 20px;
+        li {margin-right: 5px;}
+        img {display: block; opacity: .5; cursor: pointer;}
+        img:hover {opacity: 1;}
+        .flex-active-slide img {opacity: 1; cursor: default;}
+    }
+    .flex-direction-nav a {
+      height: 45px;
+      margin: -28px 0 0;
+    }
+}
+
+.panel-heading
+{
+    div.carousel
+    {
+        div.carousel-inner
+        {
+            background: none;
+            div.item 
+            {
+                width:100%;
+                height:200px;
+                div.small
+                {
+                    margin:0;
+                    padding:0;
+                    width: 100%;
+                    height: 100%;
+                    display: table;
+                    text-align: center;
+
+                    div.carousel-caption 
+                    {
+                        margin: 0;
+                        padding: 0;
+                        bottom: 0;
+                        display: none;
+                        p 
+                        {
+                            background: rgba(0, 0, 0, 0.5);
+                            color: #fff;
+                        }
+                    }
+
+                }
+
+                div.small:hover{
+                    div.carousel-caption 
+                    {
+                        display: block;
+                    }
+                }
+
+                div.small img{
+                    position: absolute;
+                    margin: auto;
+                    max-width: 100%;
+                    max-height: 200px;
+                    text-align: center;
+                    text-indent: -9999999999px;
+                    top:0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    clear: both;
+                }
+
+                div.small img.lazy
+                {
+                    min-height: 100px;
+                    min-width: 100px;
+                    background: url(img/loader.gif) center center no-repeat;
+                }
+            }
+        }
+
+        .carousel-control
+        {
+            background: none;
+        }
+    }
+}
+
+.panel-gallery-body
+{
+    overflow-y: scroll;
+    height: 75px;
+}
+main{
+    article.article
+    {
+        margin-bottom: 7px;
+        background-color: @gray;
+        padding: 10px;
+        header h1, header h2
+        {
+            color:@blue;
+            margin-top: 0;
+            font-size: 25px;
+        } 
+    }
+}
